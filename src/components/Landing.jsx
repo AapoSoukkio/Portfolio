@@ -9,7 +9,7 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-`
+`;
 
 const Container = styled.div`
   height: 100vh;
@@ -17,7 +17,7 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const Left = styled.div`
   flex: 2;
