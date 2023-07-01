@@ -3,6 +3,7 @@ import About from "./components/About"
 import Contact from "./components/Contact"
 import Landing from "./components/Landing"
 import Projects from "./components/Projects"
+import Test from "./components/Test"
 
 const Container = styled.div`
   height: 100vh;
@@ -25,6 +26,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Test />
     </Container>
   )
 }
