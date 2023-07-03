@@ -3,8 +3,6 @@ import styled from "styled-components";
 import FullStack from "./FullStack";
 import WebDesign from "./WebDesign";
 
-//Note: Use short words in order to prevent the overflow problem
-//TODO: Find out the cause of this problem
 const data = [
   "Web development",
   "Fullstack",
@@ -46,6 +44,7 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+  white-space: nowrap;
 
   &::after {
     content: attr(data-text); 
