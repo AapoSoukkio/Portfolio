@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import FullStack from "./FullStack";
+import WebDesign from "./WebDesign";
 
 //Note: Use short words in order to prevent the overflow problem
 //TODO: Find out the cause of this problem
 const data = [
-  "Web design",
-  "Development",
-  "AI",
+  "Web development",
   "Fullstack",
-  "3D"
+  "Hackathons",
+  "More of my work"
 ];
 
 const Section = styled.div`
@@ -39,7 +40,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 90px;
+  font-size: 80px;
   font-weight: bold;
   cursor: pointer;
   color: transparent;
@@ -75,19 +76,28 @@ const Right = styled.div`
 `;
 
 const Projects = () => {
+  const [work, setWork] = useState("Web Design");
   return (
     <Section>
       <Container>
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} data-text={item}>
+              <ListItem key={item} data-text={item} onClick={()=>setWork(item)}>
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
-        <Right></Right>
+        <Right>
+        {work === "Web Design" ? (
+            <WebDesign />
+          ) : work === "Fullstack" ? (
+            <FullStack />
+          ) : (
+            <WebDesign />
+          )}
+        </Right>
       </Container>
     </Section>
   );
