@@ -1,5 +1,8 @@
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import React from "react";
-import styled  from 'styled-components'
+import styled from "styled-components";
+import Cube from "./Cube";
 
 const Section = styled.div`
   height: 100vh;
@@ -63,24 +66,29 @@ const Button = styled.button`
 `;
 
 const About = () => {
-    return (
-        <Section>
-          <Container>
-            <Left>
-              {/* 3D model */}
-            </Left>
-            <Right>
-              <Title>Something relative to the 3D model</Title>
-              <WhatWeDo>
-                <Line src="./img/line.png"/>
-                <Subtitle>Who I am</Subtitle>
-              </WhatWeDo>
-              <Desc>Description here... Lorelom ipsulum...</Desc>
-              <Button>See my work</Button>
-            </Right>
-          </Container>
-        </Section>
-    )
+  return (
+    <Section>
+      <Container>
+        <Left>
+          <Canvas camera={{fov:25, position:[5, 5, 5]}}>
+            <OrbitControls enableZoom={false} autoRotate />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Cube />
+          </Canvas>
+        </Left>
+        <Right>
+          <Title>Something relative to the 3D model</Title>
+          <WhatWeDo>
+            <Line src="./img/line.png" />
+            <Subtitle>Who I am</Subtitle>
+          </WhatWeDo>
+          <Desc>Description here... Lorelom ipsulum...</Desc>
+          <Button>See my work</Button>
+        </Right>
+      </Container>
+    </Section>
+  )
 }
 
 export default About

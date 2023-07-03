@@ -1,6 +1,8 @@
 import React from "react";
 import styled  from 'styled-components'
 import Navbar from "./Navbar";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 const Section = styled.div`
   height: 100vh;
@@ -88,22 +90,34 @@ const Landing = () => {
     return (
         <Section>
           <Navbar/>
-          <Container>
-            <Left>
-              <Title>Something, something, something</Title>
-              <WhatWeDo>
-                <Line src="./img/line.png"/>
-                <Subtitle>What I do</Subtitle>
-              </WhatWeDo>
-              <Desc>Description here... and something more</Desc>
-              <Button>Learn More</Button>
-            </Left>
-            <Right>
-              {/* 3D model */}
-              <Img src="./img/monkey.png"/>
-            </Right>
-          </Container>
-        </Section>
+        <Container>
+          <Left>
+            <Title>Something, something, something</Title>
+            <WhatWeDo>
+              <Line src="./img/line.png" />
+              <Subtitle>What I do</Subtitle>
+            </WhatWeDo>
+            <Desc>Description here... and something more</Desc>
+            <Button>Learn More</Button>
+          </Left>
+          <Right>
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={1}>
+                <MeshDistortMaterial
+                  color="#220736"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <Img src="./img/monkey.png" />
+          </Right>
+        </Container>
+      </Section>
     )
 }
 
