@@ -1,6 +1,6 @@
 import React from "react";
 import styled  from 'styled-components'
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
@@ -89,7 +89,7 @@ const Img = styled.img`
 const Landing = () => {
     return (
         <Section>
-          <Navbar/>
+          {/* <Navbar/> */}
         <Container>
           <Left>
             <Title>Something, something, something</Title>

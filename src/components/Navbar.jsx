@@ -12,6 +12,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
+  scroll-snap-align: center;
 `;
 
 const Links = styled.div`

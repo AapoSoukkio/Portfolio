@@ -1,8 +1,5 @@
 import styled from "styled-components"
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Landing from "./components/Landing"
-import Projects from "./components/Projects"
+import Home from "./components/Home"
 
 const Container = styled.div`
   height: 100vh;
@@ -15,16 +12,13 @@ const Container = styled.div`
   &::-webkit-scrollbar{
     display: none;
   }
-`
+`;
 
 function App() {
 
   return (
     <Container>
-      <Landing />
-      <About />
-      <Projects />
-      <Contact />
+      <Home />
     </Container>
   )
 }
