@@ -2,7 +2,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
-import ComputerDesign from "./ComputerDesign";
+import ComputerDesign from "./3D-Components/ComputerDesign";
 
 const Desc = styled.div`
   width: 200px;
