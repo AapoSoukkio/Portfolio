@@ -7,14 +7,15 @@ Source: https://sketchfab.com/3d-models/diseno-3d-web-development-resource-70f8d
 Title: Diseño 3D - Web Development Resource
 */
 
-import React, { useRef } from 'react'
+import React, { useState } from 'react';
 import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/computerDesign-transformed.glb')
+  const [scale] = useState(2); // State variable to store the scale value
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.Cube002_Maceta_0.geometry} material={materials.PaletteMaterial001} position={[-0.272, -0.026, -0.025]} rotation={[0, 0.466, 0]} scale={0.08} />
+    <group scale={scale} {...props} dispose={null}>
+      <mesh geometry={nodes.Cube002_Maceta_0.geometry} material={materials.PaletteMaterial001} position={[-0.272, -0.026, -0.025]} rotation={[0, 0.466, 0]} scale={1} />
     </group>
   )
 }

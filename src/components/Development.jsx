@@ -2,7 +2,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
-import Computer from "./3D-Components/Computer";
+import Boy from "./3D-Components/Boy";
 
 const Desc = styled.div`
   width: 200px;
@@ -26,23 +26,23 @@ const Desc = styled.div`
   }
 `;
 
-const FullStack = () => {
+const Development = () => {
   return (
     <>
       <Canvas>
         <Suspense fallback={null}>
           <Stage environment="city" intensity={0.6}>
-            <Computer />
+            <Boy />
           </Stage>
-          <OrbitControls enableZoom={false} autoRotate />
+          <OrbitControls enableZoom={false} autoRotate={true} />
         </Suspense>
       </Canvas>
       <Desc>
-        I have multiple completed fullstack applications.
+        I also do many other things like...
         Link to projects here
       </Desc>
     </>
   );
 };
 
-export default FullStack;
+export default Development;

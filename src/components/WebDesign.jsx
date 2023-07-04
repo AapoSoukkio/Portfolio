@@ -29,12 +29,12 @@ const Desc = styled.div`
 const WebDesign = () => {
   return (
     <>
-      <Canvas>
+      <Canvas fov={30}>
         <Suspense fallback={null}>
           <Stage environment="city" intensity={0.6}>
             <ComputerDesign />
           </Stage>
-          <OrbitControls enableZoom={false} autoRotate />
+          <OrbitControls enableZoom={false} autoRotate={false} position={[5, 5, 5]} />
         </Suspense>
       </Canvas>
       <Desc>
