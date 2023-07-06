@@ -1,5 +1,6 @@
 import React from "react";
 import styled  from 'styled-components'
+import { Link } from 'react-router-dom';
 
 const Section = styled.div`
   display: flex;
@@ -30,8 +31,18 @@ const List = styled.ul`
   gap: 20px;
   list-style: none;
 `;
+
 const ListItem = styled.li`
   cursor: pointer;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Icons = styled.div`
@@ -57,23 +68,31 @@ const Button = styled.button`
 
 const Navbar = () => {
     return (
-        <Section>
-          <Container>
-            <Links>
-            <Logo src="./img/logo.png"/>
+      <Section>
+        <Container>
+          <Links>
+            <Logo src="./img/logo.png" />
             <List>
-                <ListItem>Home</ListItem>
-                <ListItem>Studio</ListItem>
-                <ListItem>Projects</ListItem>
-                <ListItem>Contact</ListItem>
+              <ListItem>
+                <StyledLink to="/">Home</StyledLink>
+              </ListItem>
+              <ListItem>
+                <StyledLink to="/about">Studio</StyledLink>
+              </ListItem>
+              <ListItem>
+                <StyledLink to="/portfolio">Projects</StyledLink>
+              </ListItem>
+              <ListItem>
+                <StyledLink to="/contact">Contact</StyledLink>
+              </ListItem>
             </List>
-            </Links>
-            <Icons>
-                <Icon src="./img/search.png"/>
-                <Button>Hire Now</Button>
-            </Icons>
-          </Container>
-        </Section>
+          </Links>
+          <Icons>
+            <Icon src="./img/search.png" />
+            <Button>Hire Now</Button>
+          </Icons>
+        </Container>
+      </Section>
     )
 }
 

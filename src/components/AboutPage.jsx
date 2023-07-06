@@ -65,7 +65,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const About = () => {
+const AboutPage = () => {
   return (
     <Section>
       <Container>
@@ -91,4 +91,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutPage

@@ -89,7 +89,7 @@ const Button = styled.button`
   font-size: 16px;
 `;
 
-const Portfolio = () => {
+const PortfolioPage = () => {
   const projects = data;
 
   return (
@@ -119,4 +119,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default PortfolioPage;

@@ -1,6 +1,8 @@
 import styled from "styled-components"
-import Home from "./components/Home"
-import Portfolio from "./components/Portfolio"
+import Home from "./components/HomePage"
+import PortfolioPage from "./components/PortfolioPage"
+import AboutPage from "./components/AboutPage"
+import ContactPage from "./components/ContactPage"
 import Navbar from "./components/Navbar"
 import {Routes, Route} from 'react-router-dom'
 
@@ -24,9 +26,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/portfolio' element={<Portfolio/>}/>
+        <Route path='/portfolio' element={<PortfolioPage/>}/>
+        <Route path='/About' element={<AboutPage/>}/>
+        <Route path='/Contact' element={<ContactPage/>}/>
       </Routes>
-      {/* <Home /> */}
     </Container>
   )
 }

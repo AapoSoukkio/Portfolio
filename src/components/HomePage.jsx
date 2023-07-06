@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "styled-components"
-import Navbar from "./Navbar";
-import About from "./About"
-import Contact from "./Contact"
-import Landing from "./Landing"
-import Projects from "./Projects"
-import Portfolio from "./Portfolio"
-
+import About from "./Sections/About"
+import Contact from "./Sections/Contact"
+import Landing from "./Sections/Landing"
+import Projects from "./Sections/Projects"
 
 const Container = styled.div`
   height: 100vh;
@@ -24,12 +21,10 @@ const Container = styled.div`
 const Home = () => {
     return (
         <Container>
-            {/* <Navbar /> */}
             <Landing />
             <About />
             <Projects />
             <Contact />
-            <Portfolio />
         </Container>
     )
 }

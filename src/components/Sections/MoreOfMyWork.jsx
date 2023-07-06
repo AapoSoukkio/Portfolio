@@ -2,7 +2,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
-import Mousey from "./3D-Components/Mousey";
+import Mousey from "../3D-Components/Mousey";
 
 const Desc = styled.div`
   width: 200px;

@@ -2,7 +2,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
-import Boy from "./3D-Components/Boy";
+import ComputerDesign from "../3D-Components/ComputerDesign";
 
 const Desc = styled.div`
   width: 200px;
@@ -12,7 +12,7 @@ const Desc = styled.div`
   border-radius: 10px;
   position: absolute;
   top: 100px;
-  right: 500px;
+  right: 100px;
   color: black;
   font-size: 14px;
   font-weight: 300;
@@ -26,23 +26,23 @@ const Desc = styled.div`
   }
 `;
 
-const Development = () => {
+const WebDesign = () => {
   return (
     <>
-      <Canvas>
+      <Canvas fov={30}>
         <Suspense fallback={null}>
           <Stage environment="city" intensity={0.6}>
-            <Boy />
+            <ComputerDesign />
           </Stage>
-          <OrbitControls enableZoom={false} autoRotate={true} />
+          <OrbitControls enableZoom={false} autoRotate={false} position={[5, 5, 5]} />
         </Suspense>
       </Canvas>
       <Desc>
-        I also do many other things like...
+        I have decent experience creating and developing Web pages.
         Link to projects here
       </Desc>
     </>
   );
 };
 
-export default Development;
+export default WebDesign;

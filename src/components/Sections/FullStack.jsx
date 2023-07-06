@@ -2,7 +2,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
-import ComputerDesign from "./3D-Components/ComputerDesign";
+import Computer from "../3D-Components/Computer";
 
 const Desc = styled.div`
   width: 200px;
@@ -12,7 +12,7 @@ const Desc = styled.div`
   border-radius: 10px;
   position: absolute;
   top: 100px;
-  right: 100px;
+  right: 500px;
   color: black;
   font-size: 14px;
   font-weight: 300;
@@ -26,23 +26,23 @@ const Desc = styled.div`
   }
 `;
 
-const WebDesign = () => {
+const FullStack = () => {
   return (
     <>
-      <Canvas fov={30}>
+      <Canvas>
         <Suspense fallback={null}>
           <Stage environment="city" intensity={0.6}>
-            <ComputerDesign />
+            <Computer />
           </Stage>
-          <OrbitControls enableZoom={false} autoRotate={false} position={[5, 5, 5]} />
+          <OrbitControls enableZoom={false} autoRotate />
         </Suspense>
       </Canvas>
       <Desc>
-        I have decent experience creating and developing Web pages.
+        I have multiple completed fullstack applications.
         Link to projects here
       </Desc>
     </>
   );
 };
 
-export default WebDesign;
+export default FullStack;
