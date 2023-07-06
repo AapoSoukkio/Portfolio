@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { data } from '../data/data.js';
 
 const Container = styled.div`
@@ -8,28 +9,23 @@ const Container = styled.div`
   padding: 4px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: none;
   height: 100%;
   scroll-snap-align: center;
-
-`;
-
-const Title = styled.p`
-  font-size: 4xl;
-  font-weight: bold;
-  display: inline;
-  border-bottom: 4px solid #4a5568;
-  color: #4a5568;
 `;
 
 const Description = styled.p`
-  padding: 24px 0;
+  padding: 34px 0;
+  font-size: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 16px;
+  grid-gap: 26px;
 `;
 
 const ProjectItem = styled.div`
@@ -37,7 +33,7 @@ const ProjectItem = styled.div`
   width: 100%;
   height: 0;
   padding-bottom: 100%;
-  background-image: url(${props => props.image});
+  background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -64,7 +60,7 @@ const ProjectOverlay = styled.div`
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  cursor: pointer;
+  cursor: default;
 
   ${ProjectItem}:hover & {
     opacity: 1;
@@ -78,6 +74,14 @@ const ProjectTitle = styled.span`
   margin-bottom: 16px;
 `;
 
+const ProjectCategory = styled.span`
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: bold;
+  margin: 4px;
+  justify-content: center;
+`;
+
 const Button = styled.button`
   text-align: center;
   border-radius: 8px;
@@ -87,35 +91,40 @@ const Button = styled.button`
   color: #4a5568;
   font-weight: bold;
   font-size: 16px;
+  cursor: pointer;
 `;
 
 const PortfolioPage = () => {
   const projects = data;
 
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
-      <Container>
-        <Title>Work</Title>
-        <Description>// Check out some of my recent work</Description>
-        <ProjectGrid>
-          {projects.map((item, index) => (
-            <ProjectItem key={index} image={item.image}>
-              <ProjectOverlay>
-                <ProjectTitle>{item.name}</ProjectTitle>
-                <div>
-                  <a href={item.github} target="_blank" rel="noopener noreferrer">
-                    <Button>Code</Button>
-                  </a>
-                  <a href={item.live} target="_blank" rel="noopener noreferrer">
-                    <Button>Live</Button>
-                  </a>
-                </div>
-              </ProjectOverlay>
-            </ProjectItem>
-          ))}
-        </ProjectGrid>
-      </Container>
-    </div>
+    <Container>
+    <Description>Check out some of my recent work</Description>
+    <ProjectGrid>
+      {projects.map((item, index) => (
+        <ProjectItem key={index} image={item.image}>
+          <ProjectCategory>{item.category}</ProjectCategory>
+          <ProjectOverlay>
+            <ProjectTitle>{item.name}</ProjectTitle>
+            {item.github ? (
+              <Link to={item.github} target="_blank" rel="noopener noreferrer">
+                <Button>Code</Button>
+              </Link>
+            ) : (
+              <p>Code not available</p>
+            )}
+            {item.preview ? (
+              <Link to={item.preview} target="_blank" rel="noopener noreferrer">
+                <Button>Preview</Button>
+              </Link>
+            ) : (
+              <p>Preview not available</p>
+            )}
+          </ProjectOverlay>
+        </ProjectItem>
+      ))}
+    </ProjectGrid>
+  </Container>
   );
 };
 

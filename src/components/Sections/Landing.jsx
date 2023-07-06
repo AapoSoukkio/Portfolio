@@ -1,8 +1,9 @@
 import React from "react";
 import styled  from 'styled-components'
-// import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import MyAvatarV2 from "../3D-Components/MyAvatarV2";
+
 
 const Section = styled.div`
   height: 100vh;
@@ -89,7 +90,6 @@ const Img = styled.img`
 const Landing = () => {
     return (
         <Section>
-          {/* <Navbar/> */}
         <Container>
           <Left>
             <Title>Something, something, something</Title>
@@ -105,16 +105,9 @@ const Landing = () => {
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
               <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={1}>
-                <MeshDistortMaterial
-                  color="#220736"
-                  attach="material"
-                  distort={0.5}
-                  speed={2}
-                />
-              </Sphere>
+              <MyAvatarV2 />
             </Canvas>
-            <Img src="./img/monkey.png" />
+            {/* <Img src="./img/monkey.png" /> */}
           </Right>
         </Container>
       </Section>

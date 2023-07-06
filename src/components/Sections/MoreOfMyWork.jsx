@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
@@ -39,7 +40,8 @@ const MoreOfMyWork = () => {
       </Canvas>
       <Desc>
         I also do many other things like...
-        Link to projects here
+        <br />
+        <Link to="/portfolio">Link to projects here</Link>
       </Desc>
     </>
   );
