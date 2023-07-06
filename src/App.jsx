@@ -1,5 +1,8 @@
 import styled from "styled-components"
 import Home from "./components/Home"
+import Portfolio from "./components/Portfolio"
+import Navbar from "./components/Navbar"
+import {Routes, Route} from 'react-router-dom'
 
 const Container = styled.div`
   height: 100vh;
@@ -18,7 +21,12 @@ function App() {
 
   return (
     <Container>
-      <Home />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/portfolio' element={<Portfolio/>}/>
+      </Routes>
+      {/* <Home /> */}
     </Container>
   )
 }

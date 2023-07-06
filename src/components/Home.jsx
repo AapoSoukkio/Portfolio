@@ -24,7 +24,7 @@ const Container = styled.div`
 const Home = () => {
     return (
         <Container>
-            <Navbar />
+            {/* <Navbar /> */}
             <Landing />
             <About />
             <Projects />
