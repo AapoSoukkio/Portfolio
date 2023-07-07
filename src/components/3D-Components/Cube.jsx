@@ -22,9 +22,9 @@ const Cube = () => {
                     makeDefault
                     position={[0,0,5]}
                 />
-                <color attach="background" args={["pink"]} />
-                <Text ref={textRef} fontSize={3} color="#555">
-                    hello
+                 <color attach="background" args={["#da4ea2"]} />
+                <Text ref={textRef} fontSize={0.9} color="#f0e3e3">
+                    Nice to meet you!
                 </Text>
             </RenderTexture>
         </meshStandardMaterial>

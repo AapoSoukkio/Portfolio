@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
 import Cube from "./3D-Components/Cube";
+import MyAvatarV3 from "./3D-Components/MyAvatarV3";
 
 const Section = styled.div`
   height: 100vh;
@@ -21,6 +22,11 @@ const Container = styled.div`
 
 const Left = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 20px;
 `;
 
 const Title = styled.h1`
@@ -29,10 +35,6 @@ const Title = styled.h1`
 
 const Right = styled.div`
   flex: 1; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
 `;
 
 const WhatWeDo = styled.div`
@@ -70,21 +72,28 @@ const AboutPage = () => {
     <Section>
       <Container>
         <Left>
-          <Canvas camera={{fov:25, position:[5, 5, 5]}}>
-            <OrbitControls enableZoom={false} autoRotate />
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <Cube />
-          </Canvas>
-        </Left>
-        <Right>
-          <Title>Something relative to the 3D model</Title>
+          <Title>Hi, My name is Aapo Soukkio</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>Who I am</Subtitle>
           </WhatWeDo>
-          <Desc>Description here... Lorelom ipsulum...</Desc>
+          <Desc>
+            I'm 25- years old programmer, IT-student and former mining equipment
+            mechanic from Tampere, Finland. At the moment I approach the completion
+            of my Information technology studies that are ongoing at Savonia University
+            of Applied Sciences in Kuopio, Finland. The primary focus of my studies lies
+            in software development and design, encompassing a solid understanding of
+            network technologies as well.
+            </Desc>
           <Button>See my work</Button>
+        </Left>
+        <Right>
+          <Canvas>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <MyAvatarV3 />
+          </Canvas>
         </Right>
       </Container>
     </Section>
