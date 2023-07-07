@@ -25,7 +25,7 @@ const Description = styled.p`
 const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 26px;
+  grid-gap: 46px;
 `;
 
 const ProjectItem = styled.div`

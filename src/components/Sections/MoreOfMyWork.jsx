@@ -39,7 +39,7 @@ const MoreOfMyWork = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        I also do many other things like...
+        I also enjoy Hackathons, Competitive programming, Algorithms, Math...  
         <br />
         <Link to="/portfolio">Link to projects here</Link>
       </Desc>

@@ -2,6 +2,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Boy from "../3D-Components/Boy";
 
 const Desc = styled.div`
@@ -38,8 +39,9 @@ const Development = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        I also do many other things like...
-        Link to projects here
+        Development work is where my strengths truly lie. 
+        <br />
+        <Link to="/portfolio">See my work</Link>
       </Desc>
     </>
   );

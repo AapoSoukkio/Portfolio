@@ -1,7 +1,8 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Cube from "../3D-Components/Cube";
 
 const Section = styled.div`
@@ -24,7 +25,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 54px;
 `;
 
 const Right = styled.div`
@@ -54,14 +55,15 @@ const Desc = styled.p`
   color: lightgray;
 `;
 
-const Button = styled.button`
+const ButtonLink = styled(Link)`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
-  width: 120px;
+  width: 100px;
   padding: 10px;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
   cursor: pointer;
 `;
 
@@ -74,17 +76,26 @@ const About = () => {
             <OrbitControls enableZoom={false} autoRotate />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
-            <Cube />
+            <Sphere args={[1, 100, 200]} scale={1}>
+                <MeshDistortMaterial
+                  // color="#220736"
+                  color="#4e4bf0"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            {/* <Cube /> */}
           </Canvas>
         </Left>
         <Right>
-          <Title>Something relative to the 3D model</Title>
+          <Title>"Aapo is the person you wish you had on your team" </Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
-            <Subtitle>Who I am</Subtitle>
+            <Subtitle>Consistency, Quality and Logical problem solving</Subtitle>
           </WhatWeDo>
-          <Desc>Description here... Lorelom ipsulum...</Desc>
-          <Button>See my work</Button>
+          <Desc>Hands on attitude gets things done</Desc>
+          <ButtonLink to="/portfolio">See my work</ButtonLink>
         </Right>
       </Container>
     </Section>

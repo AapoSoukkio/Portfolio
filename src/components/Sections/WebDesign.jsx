@@ -2,6 +2,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import ComputerDesign from "../3D-Components/ComputerDesign";
 
 const Desc = styled.div`
@@ -38,8 +39,9 @@ const WebDesign = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        I have decent experience creating and developing Web pages.
-        Link to projects here
+        I have gained solid amount of experience in creating and developing web pages.
+        <br />
+        <Link to="/portfolio">See my work</Link>
       </Desc>
     </>
   );

@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import MyAvatarV2 from "../3D-Components/MyAvatarV2";
 import Typist from "react-typist";
+import { Link } from "react-router-dom";
 
 const Section = styled.div`
   height: 100vh;
@@ -36,6 +37,7 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
   max-width: 100%;
+  padding-left: 20px;
 
   @media only screen and (max-width: 768px) {
     text-align: center;
@@ -74,7 +76,7 @@ const Desc = styled.p`
   }
 `;
 
-const Button = styled.button`
+const ButtonLink = styled(Link)`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
@@ -82,6 +84,7 @@ const Button = styled.button`
   padding: 10px;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
   cursor: pointer;
 `;
 
@@ -173,13 +176,13 @@ const Landing = () => {
     <Section>
       <Container>
         <Left>
-          <Title>Something, something, something</Title>
+          <Title>Imaginative, ambitious programmer</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>What I do</Subtitle>
           </WhatWeDo>
-          <Desc>Description here... and something more</Desc>
-          <Button>Learn More</Button>
+          <Desc>Passion for development and Software-design</Desc>
+          <ButtonLink to="/about">About Me</ButtonLink>
         </Left>
         <Right>
           {visited && isTyping && (

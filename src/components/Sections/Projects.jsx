@@ -6,10 +6,10 @@ import MoreOfMyWork from "./MoreOfMyWork";
 import Development from "./Development";
 
 const data = [
-  "Fullstack",
+  "Full stack",
   "Web Design",
   "Development",
-  "More of my work"
+  "Others"
 ];
 
 const Section = styled.div`
@@ -77,7 +77,7 @@ const Right = styled.div`
 `;
 
 const Projects = () => {
-  const [work, setWork] = useState("Fullstack");
+  const [work, setWork] = useState("Full stack");
   return (
     <Section>
       <Container>
@@ -91,7 +91,7 @@ const Projects = () => {
           </List>
         </Left>
         <Right>
-        {work === "Fullstack" ? (
+        {work === "Full stack" ? (
             <FullStack />
           ) : work === "Web Design" ? (
             <WebDesign />
