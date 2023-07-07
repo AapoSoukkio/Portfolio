@@ -159,7 +159,7 @@ const Landing = () => {
     if (isTyping) {
       const speakDelay = setTimeout(() => {
         setShowSpeak(false);
-      }, 8000);
+      }, 10000);
 
       return () => {
         clearTimeout(speakDelay);
@@ -193,7 +193,7 @@ const Landing = () => {
               </Typist>
             </Speak>
           )}
-          <Canvas>
+          <Canvas shadows camera={{ position: [-3, 5, 9], fov: 30}}>
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />

@@ -88,7 +88,7 @@ const AboutPage = () => {
           <Button>See my work</Button>
         </Left>
         <Right>
-          <Canvas>
+          <Canvas camere>
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
