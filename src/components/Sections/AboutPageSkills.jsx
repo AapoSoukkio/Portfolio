@@ -60,7 +60,7 @@ const Desc = styled.p`
 
 const AboutPageSkills = () => {
   return (
-    <Section>
+    <Section id="section2"> 
       <Container>
         <Left>
           <SkillBar />

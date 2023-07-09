@@ -2,6 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
+import { Element, Events, animateScroll as scroll } from "react-scroll";
 import MyAvatarV3 from "../3D-Components/MyAvatarV3";
 
 const Section = styled.div`

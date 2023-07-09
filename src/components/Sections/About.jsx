@@ -95,7 +95,7 @@ const About = () => {
             <Subtitle>Consistency, Quality and Logical problem solving</Subtitle>
           </WhatWeDo>
           <Desc>Hands on attitude gets things done</Desc>
-          <ButtonLink to="/portfolio">See my work</ButtonLink>
+          <ButtonLink to="/about">Read more</ButtonLink>
         </Right>
       </Container>
     </Section>
