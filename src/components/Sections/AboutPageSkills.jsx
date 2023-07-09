@@ -1,8 +1,5 @@
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
-import MyAvatarV3 from "../3D-Components/MyAvatarV3";
 import SkillBar from "./SkillBar"; 
 
 const Section = styled.div`
@@ -30,7 +27,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 60px;
 `;
 
 const Right = styled.div`
@@ -39,7 +36,7 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 const SubHeadLine = styled.div`
@@ -57,19 +54,8 @@ const Subtitle = styled.h2`
 `;
 
 const Desc = styled.p`
-  font-size: 24px;
+  font-size: 20px;
   color: lightgray;
-`;
-
-const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
-  width: 120px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 `;
 
 const AboutPageSkills = () => {

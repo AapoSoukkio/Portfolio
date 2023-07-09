@@ -55,36 +55,27 @@ const Desc = styled.p`
   color: lightgray;
 `;
 
-const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
-  width: 120px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
-
-const AboutPageWho = () => {
+const AboutPagePersonal = () => {
   return (
     <Section>
       <Container>
         <Left>
-          <Title>Hi, My name is Aapo Soukkio</Title>
+          <Title>Beyond Software Development</Title>
           <SubHeadLine>
             <Line src="./img/line.png" />
-            <Subtitle>Who I am</Subtitle>
+            <Subtitle>Personal Insights</Subtitle>
           </SubHeadLine>
           <Desc>
-            I'm 25- years old programmer, IT-student and former mining equipment
-            mechanic from Tampere, Finland. At the moment I approach the completion
-            of my Information technology studies that are ongoing at Savonia University
-            of Applied Sciences in Kuopio, Finland. The primary focus of my studies lies
-            in software development and design, encompassing a solid understanding of
-            network technologies as well.
+            On a personal note, I am a calm and easygoing individual with a curious and
+            creative mind.  I find great joy in exploring new things and expanding my
+            knowledge through reading and various experiences. I'm a big fan of the arts,
+             especially live music, and I enjoy playing the guitar myself.
+            <br/>
+            <br/>
+            I have a long history of competing in sports at a high level, so I like to keep active. 
+            I have always been drawn to two-wheelers, and nowadays, I find great enjoyment in 
+            traveling on motorcycles and engaging in track driving as my favorite pastimes.
             </Desc>
-          <Button>See more below</Button>
         </Left>
         <Right>
           <Canvas camere>
@@ -99,4 +90,4 @@ const AboutPageWho = () => {
   )
 }
 
-export default AboutPageWho
+export default AboutPagePersonal

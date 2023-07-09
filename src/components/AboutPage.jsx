@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components"
 import AboutPageWho from "./Sections/AboutPageWho"
 import AboutPageSkills from "./Sections/AboutPageSkills"
+import AboutPagePersonal from "./Sections/AboutPagePersonal"
 
 const Container = styled.div`
   height: 100vh;
@@ -21,6 +22,7 @@ const AboutPage = () => {
         <Container>
             <AboutPageWho />
             <AboutPageSkills />
+            <AboutPagePersonal />
         </Container>
     )
 }
