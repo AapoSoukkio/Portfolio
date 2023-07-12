@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components"
-import About from "./Sections/About"
-import Contact from "./Sections/Contact"
-import Landing from "./Sections/Landing"
-import Projects from "./Sections/Projects"
+import HomePageAbout from "./Sections/HomePageAbout"
+import HomePageContact from "./Sections/HomePageContact"
+import HomePageLanding from "./Sections/HomePageLanding"
+import HomePageProjects from "./Sections/HomePageProjects"
 
 const Container = styled.div`
   height: 100vh;
@@ -21,10 +21,10 @@ const Container = styled.div`
 const Home = () => {
     return (
         <Container>
-            <Landing />
-            <About />
-            <Projects />
-            <Contact />
+            <HomePageLanding />
+            <HomePageAbout />
+            <HomePageProjects />
+            <HomePageContact />
         </Container>
     )
 }

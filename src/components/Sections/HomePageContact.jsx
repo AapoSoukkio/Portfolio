@@ -62,7 +62,7 @@ const Right = styled.div`
   flex: 1;
 `;
 
-const Contact = () => {
+const HomePageContact = () => {
   const ref = useRef()
   const [success, setSuccess] = useState(null);
 
@@ -99,4 +99,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default HomePageContact

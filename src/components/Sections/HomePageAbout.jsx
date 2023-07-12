@@ -67,7 +67,7 @@ const ButtonLink = styled(Link)`
   cursor: pointer;
 `;
 
-const About = () => {
+const HomePageAbout = () => {
   return (
     <Section>
       <Container>
@@ -102,4 +102,4 @@ const About = () => {
   )
 }
 
-export default About
+export default HomePageAbout

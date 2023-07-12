@@ -76,7 +76,7 @@ const Right = styled.div`
   flex: 1;
 `;
 
-const Projects = () => {
+const HomePageProjects = () => {
   const [work, setWork] = useState("Full stack");
   return (
     <Section>
@@ -106,4 +106,4 @@ const Projects = () => {
   );
 };
 
-export default Projects 
+export default HomePageProjects 

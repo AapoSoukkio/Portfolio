@@ -140,7 +140,7 @@ const Speak = styled.div`
   }
 `;
 
-const Landing = () => {
+const HomePageLanding = () => {
   const [visited, setVisited] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const [showSpeak, setShowSpeak] = useState(true);
@@ -205,4 +205,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default HomePageLanding;
