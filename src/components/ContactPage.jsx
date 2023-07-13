@@ -4,16 +4,30 @@ import styled from "styled-components";
 import Map from "./Sections/Map";
 
 const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
+  height: 100%;
+  scroll-snap-align: start;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
 `;
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  padding-bottom: 100px; 
 `;
 
 const Left = styled.div`
@@ -24,7 +38,17 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
+  padding-top: 50px;
   font-weight: 200;
+`;
+
+const SubTitle = styled.h3`
+  font-weight: 200;
+`;
+
+const Icon = styled.img`
+  width: 40px;
+  cursor: pointer;
 `;
 
 const Form = styled.form`
@@ -84,9 +108,15 @@ const ContactPage = () => {
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Me</Title>
+            <a href="https://www.linkedin.com/in/aapo-soukkio-a132b2244/" target="_blank" rel="noopener noreferrer">
+            <Icon src="./img/linkedin.png" alt="LinkedIn" />
+            </a>
+            <SubTitle>Mobile phone: +358 452 334618</SubTitle>
+            <SubTitle>Email: aapo.soukkio@gmail.com</SubTitle>
+            <SubTitle>Or fill the form below and I will get back to you.</SubTitle>
             <Input placeholder="Name" name="name" />
             <Input placeholder="Email" name="email" />
-            <TextArea placeholder="Write your message" name="message" rows={10} />
+            <TextArea placeholder="Write your message" name="message" rows={8} />
             <Button type="submit">Send</Button>
             {success && "Your message has been sent. We'll get back to you soon :)"}
           </Form>

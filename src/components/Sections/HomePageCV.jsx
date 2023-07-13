@@ -2,8 +2,8 @@ import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
+import CV from "../../assets/CV.pdf";
 import { Link } from "react-router-dom";
-import Cube from "../3D-Components/Cube";
 
 const Section = styled.div`
   height: 100vh;
@@ -67,7 +67,19 @@ const ButtonLink = styled(Link)`
   cursor: pointer;
 `;
 
-const HomePageAbout = () => {
+const Anchor = styled.a`
+  background-color: #da4ea2;
+  color: white;
+  font-weight: 500;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+` 
+
+const HomePageCV = () => {
   return (
     <Section>
       <Container>
@@ -96,10 +108,13 @@ const HomePageAbout = () => {
           </WhatWeDo>
           <Desc>Hands on attitude gets things done</Desc>
           <ButtonLink to="/about">Read more</ButtonLink>
+          <Anchor href={CV} download>
+           Download CV
+          </Anchor>
         </Right>
       </Container>
     </Section>
   )
 }
 
-export default HomePageAbout
+export default HomePageCV

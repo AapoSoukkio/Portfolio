@@ -3,6 +3,7 @@ import Home from "./components/HomePage"
 import PortfolioPage from "./components/PortfolioPage"
 import AboutPage from "./components/AboutPage"
 import ContactPage from "./components/ContactPage"
+import NotFound from "./components/NotFound"
 import Navbar from "./components/Navbar"
 import {Routes, Route} from 'react-router-dom'
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/portfolio' element={<PortfolioPage/>}/>
         <Route path='/About' element={<AboutPage/>}/>
         <Route path='/Contact' element={<ContactPage/>}/>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
     </Container>
   )

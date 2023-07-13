@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import HomePageAbout from "./Sections/HomePageAbout"
+import HomePageCV from "./Sections/HomePageCV"
 import HomePageContact from "./Sections/HomePageContact"
 import HomePageLanding from "./Sections/HomePageLanding"
 import HomePageProjects from "./Sections/HomePageProjects"
@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <Container>
             <HomePageLanding />
-            <HomePageAbout />
+            <HomePageCV />
             <HomePageProjects />
             <HomePageContact />
         </Container>
