@@ -1,5 +1,5 @@
 import React from "react";
-import styled  from 'styled-components'
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Section = styled.div`
@@ -24,6 +24,7 @@ const Links = styled.div`
 
 const Logo = styled.img`
   height: 50px;
+  width: 80px;
 `;
 
 const List = styled.ul`
@@ -52,7 +53,7 @@ const Icons = styled.div`
 `;
 
 const Icon = styled.img`
-  width: 40px;
+  width: 35px;
   cursor: pointer;
 `;
 
@@ -69,38 +70,38 @@ const ButtonLink = styled(Link)`
 `;
 
 const Navbar = () => {
-    return (
-      <Section>
-        <Container>
-          <Links>
-            <Logo src="./img/logoV4.png" />
-            <List>
-              <ListItem>
-                <StyledLink to="/">Home</StyledLink>
-              </ListItem>
-              <ListItem>
-                <StyledLink to="/about">About</StyledLink>
-              </ListItem>
-              <ListItem>
-                <StyledLink to="/portfolio">Projects</StyledLink>
-              </ListItem>
-              <ListItem>
-                <StyledLink to="/contact">Contact</StyledLink>
-              </ListItem>
-            </List>
-          </Links>
-          <Icons>
-          <a href="https://github.com/AapoSoukkio" target="_blank" rel="noopener noreferrer">
-            <Icon src="./img/github.png" alt="GitHub" />
-          </a>
+  return (
+    <Section>
+      <Container>
+        <Links>
+          <Logo src="./img/logoV6.png" />
+          <List>
+            <ListItem>
+              <StyledLink to="/">Home</StyledLink>
+            </ListItem>
+            <ListItem>
+              <StyledLink to="/about">About</StyledLink>
+            </ListItem>
+            <ListItem>
+              <StyledLink to="/portfolio">Projects</StyledLink>
+            </ListItem>
+            <ListItem>
+              <StyledLink to="/contact">Contact</StyledLink>
+            </ListItem>
+          </List>
+        </Links>
+        <Icons>
           <a href="https://www.linkedin.com/in/aapo-soukkio-a132b2244/" target="_blank" rel="noopener noreferrer">
             <Icon src="./img/linkedin.png" alt="LinkedIn" />
           </a>
+          <a href="https://github.com/AapoSoukkio" target="_blank" rel="noopener noreferrer">
+            <Icon src="./img/github.png" alt="GitHub" />
+          </a>
           <ButtonLink to="/contact">Hire Now</ButtonLink>
         </Icons>
-        </Container>
-      </Section>
-    )
-}
+      </Container>
+    </Section>
+  );
+};
 
-export default Navbar
+export default Navbar;

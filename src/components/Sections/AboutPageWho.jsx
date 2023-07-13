@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
 import { Element, Events, animateScroll as scroll } from "react-scroll";
-import MyAvatarV3 from "../3D-Components/MyAvatarV3";
+import MyAvatarV4 from "../3D-Components/MyAvatarV4";
 
 const Section = styled.div`
   height: 100vh;
@@ -88,11 +88,11 @@ const AboutPageWho = () => {
           <Button>See more below</Button>
         </Left>
         <Right>
-          <Canvas camere>
+          <Canvas>
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
-            <MyAvatarV3 />
+            <MyAvatarV4 />
           </Canvas>
         </Right>
       </Container>

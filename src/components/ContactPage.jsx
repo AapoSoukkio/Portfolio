@@ -44,6 +44,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.h3`
   font-weight: 200;
+  color: white;
 `;
 
 const Icon = styled.img`
@@ -108,11 +109,11 @@ const ContactPage = () => {
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Me</Title>
-            <a href="https://www.linkedin.com/in/aapo-soukkio-a132b2244/" target="_blank" rel="noopener noreferrer">
-            <Icon src="./img/linkedin.png" alt="LinkedIn" />
-            </a>
             <SubTitle>Mobile phone: +358 452 334618</SubTitle>
             <SubTitle>Email: aapo.soukkio@gmail.com</SubTitle>
+            <a href="https://www.linkedin.com/in/aapo-soukkio-a132b2244/" target="_blank" rel="noopener noreferrer">
+            <SubTitle>Message me on LinkedIn</SubTitle>
+            </a>
             <SubTitle>Or fill the form below and I will get back to you.</SubTitle>
             <Input placeholder="Name" name="name" />
             <Input placeholder="Email" name="email" />
