@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Computer from "../3D-Components/Computer";
+import Boy from "../3D-Components/Boy";
 
 const Desc = styled.div`
   width: 200px;
@@ -33,9 +33,9 @@ const FullStack = () => {
       <Canvas>
         <Suspense fallback={null}>
           <Stage environment="city" intensity={0.6}>
-            <Computer />
+            <Boy />
           </Stage>
-          <OrbitControls enableZoom={false} autoRotate />
+          <OrbitControls enableZoom={false} autoRotate={true} />
         </Suspense>
       </Canvas>
       <Desc>

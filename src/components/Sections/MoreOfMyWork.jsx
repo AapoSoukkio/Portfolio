@@ -3,7 +3,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
-import Mousey from "../3D-Components/Mousey";
+import MyAvatarV5 from "../3D-Components/MyAvatarV5";
 
 const Desc = styled.div`
   width: 200px;
@@ -31,15 +31,13 @@ const MoreOfMyWork = () => {
   return (
     <>
       <Canvas>
-        <Suspense fallback={null}>
-          <Stage environment="city" intensity={0.6}>
-            <Mousey />
-          </Stage>
-          <OrbitControls enableZoom={false} autoRotate={true} />
-        </Suspense>
+        <OrbitControls enableZoom={false} />
+        <ambientLight intensity={1} />
+        <directionalLight position={[3, 2, 1]} />
+        <MyAvatarV5 />
       </Canvas>
       <Desc>
-        I also enjoy Hackathons, Competitive programming, Algorithms, Math...  
+        I also enjoy Hackathons, Competitive programming, Algorithms, Math...
         <br />
         <Link to="/portfolio">Link to projects here</Link>
       </Desc>

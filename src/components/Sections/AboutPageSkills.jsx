@@ -77,7 +77,7 @@ const AboutPageSkills = () => {
                 <br/>
                 <br/>
                 I possess strong team working skills and effective communication abilities.
-                I value open and honest communication, creating a positive and productive team atmosphere. 
+                I'm all into open and honest communication, creating a positive and productive team atmosphere. 
                 <br/>
                 <br/>
                 As a programmer, my strengths lie in object-oriented languages,

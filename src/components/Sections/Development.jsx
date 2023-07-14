@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Boy from "../3D-Components/Boy";
+import Computer from "../3D-Components/Computer";
 
 const Desc = styled.div`
   width: 200px;
@@ -31,12 +31,10 @@ const Development = () => {
   return (
     <>
       <Canvas>
-        <Suspense fallback={null}>
-          <Stage environment="city" intensity={0.6}>
-            <Boy />
-          </Stage>
-          <OrbitControls enableZoom={false} autoRotate={true} />
-        </Suspense>
+        <OrbitControls enableZoom={false}/>
+        <ambientLight intensity={1} />
+        <directionalLight position={[3, 2, 1]} />
+        <Computer />
       </Canvas>
       <Desc>
         Development work is where my strengths truly lie. 

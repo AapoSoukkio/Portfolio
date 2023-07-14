@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import ComputerDesign from "../3D-Components/ComputerDesign";
+import MyAvatarV6 from "../3D-Components/MyAvatarV6";
 
 const Desc = styled.div`
   width: 200px;
@@ -12,8 +12,8 @@ const Desc = styled.div`
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  top: 100px;
-  right: 100px;
+  top: 300px;
+  right: 500px;
   color: black;
   font-size: 14px;
   font-weight: 300;
@@ -30,13 +30,11 @@ const Desc = styled.div`
 const WebDesign = () => {
   return (
     <>
-      <Canvas fov={30}>
-        <Suspense fallback={null}>
-          <Stage environment="city" intensity={0.6}>
-            <ComputerDesign />
-          </Stage>
-          <OrbitControls enableZoom={false} autoRotate={false} position={[5, 5, 5]} />
-        </Suspense>
+      <Canvas>
+        <OrbitControls enableZoom={false} />
+        <ambientLight intensity={1} />
+        <directionalLight position={[3, 2, 1]} />
+        <MyAvatarV6 />
       </Canvas>
       <Desc>
         I have gained solid amount of experience in creating and developing web pages.
