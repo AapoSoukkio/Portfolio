@@ -174,7 +174,7 @@ const HomePageLanding = () => {
 
   return (
     <Section>
-      <Container>
+      {/* <Container>
         <Left>
           <Title>Imaginative, ambitious programmer</Title>
           <WhatWeDo>
@@ -200,7 +200,7 @@ const HomePageLanding = () => {
             <MyAvatarV2 />
           </Canvas>
         </Right>
-      </Container>
+      </Container> */}
     </Section>
   );
 };

@@ -22,9 +22,9 @@ const Home = () => {
     return (
         <Container>
             <HomePageLanding />
-            <HomePageCV />
+            {/* <HomePageCV />
             <HomePageProjects />
-            <HomePageContact />
+            <HomePageContact /> */}
         </Container>
     )
 }
