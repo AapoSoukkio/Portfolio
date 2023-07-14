@@ -21,6 +21,7 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-bottom: 50px;
 `;
 
 const Title = styled.h1`
@@ -86,7 +87,7 @@ const HomePageContact = () => {
             <Title>Contact Me</Title>
             <Input placeholder="Name" name="name" />
             <Input placeholder="Email" name="email" />
-            <TextArea placeholder="Write your message" name="message" rows={10} />
+            <TextArea placeholder="Write your message" name="message" rows={9} />
             <Button type="submit">Send</Button>
             {success && "Your message has been sent. We'll get back to you soon :)"}
           </Form>

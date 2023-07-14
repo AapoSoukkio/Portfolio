@@ -13,7 +13,7 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/computer-transformed.glb')
   return (
-    <group {...props} scale={1.2} position={[0, 0, 1.6]} rotation={[0, -0.6, 0]} dispose={null}>
+    <group {...props} scale={1.4} position={[0, 0, 1.6]} rotation={[0, -0.7, 0]} dispose={null}>
       <mesh geometry={nodes.defaultMaterial.geometry} material={materials['01___Default']} />
     </group>
   )

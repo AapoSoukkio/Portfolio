@@ -13,10 +13,10 @@ const Desc = styled.div`
   border-radius: 10px;
   position: absolute;
   top: 100px;
-  right: 500px;
+  right: 600px;
   color: black;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 
   @media only screen and (max-width: 768px) {
     top: 0;
@@ -41,7 +41,7 @@ const FullStack = () => {
       <Desc>
         I have multiple completed full-stack applications.
         <br />
-        <Link to="/portfolio">See my work</Link>
+        <Link to="/projects">See my work</Link>
       </Desc>
     </>
   );

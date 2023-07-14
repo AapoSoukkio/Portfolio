@@ -159,7 +159,7 @@ const HomePageLanding = () => {
     if (isTyping) {
       const speakDelay = setTimeout(() => {
         setShowSpeak(false);
-      }, 10000);
+      }, 15000);
 
       return () => {
         clearTimeout(speakDelay);

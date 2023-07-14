@@ -16,7 +16,7 @@ const Desc = styled.div`
   right: 500px;
   color: black;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 
   @media only screen and (max-width: 768px) {
     top: 0;
@@ -39,7 +39,7 @@ const WebDesign = () => {
       <Desc>
         I have gained solid amount of experience in creating and developing web pages.
         <br />
-        <Link to="/portfolio">See my work</Link>
+        <Link to="/projects">See my work</Link>
       </Desc>
     </>
   );

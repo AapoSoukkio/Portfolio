@@ -20,6 +20,7 @@ const Links = styled.div`
   display: flex;
   align-items: center;
   gap: 50px;
+  margin-left: 10px;
 `;
 
 const Logo = styled.img`
@@ -50,6 +51,7 @@ const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-right: 10px;
 `;
 
 const Icon = styled.img`
@@ -83,7 +85,7 @@ const Navbar = () => {
               <StyledLink to="/about">About</StyledLink>
             </ListItem>
             <ListItem>
-              <StyledLink to="/portfolio">Projects</StyledLink>
+              <StyledLink to="/projects">Projects</StyledLink>
             </ListItem>
             <ListItem>
               <StyledLink to="/contact">Contact</StyledLink>
@@ -97,7 +99,7 @@ const Navbar = () => {
           <a href="https://github.com/AapoSoukkio" target="_blank" rel="noopener noreferrer">
             <Icon src="./img/github.png" alt="GitHub" />
           </a>
-          <ButtonLink to="/contact">Hire Now</ButtonLink>
+          <ButtonLink to="/contact">Hire Now!</ButtonLink>
         </Icons>
       </Container>
     </Section>

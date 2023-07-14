@@ -16,7 +16,7 @@ const Desc = styled.div`
   right: 100px;
   color: black;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 
   @media only screen and (max-width: 768px) {
     top: 0;
@@ -39,7 +39,7 @@ const MoreOfMyWork = () => {
       <Desc>
         I also enjoy Hackathons, Competitive programming, Algorithms, Math...
         <br />
-        <Link to="/portfolio">Link to projects here</Link>
+        <Link to="/projects">See my work</Link>
       </Desc>
     </>
   );
