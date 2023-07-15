@@ -73,8 +73,8 @@ const AboutPagePersonal = () => {
             <br/>
             <br/>
             I have a long history of competing in sports at a high level, so I like to keep active. 
-            I have always been drawn to two-wheelers, and nowadays, I find great enjoyment in 
-            traveling on motorcycles and engaging in track driving as my favorite pastimes.
+            I have always been drawn to two-wheelers, and nowadays, I enjoy in 
+            traveling on motorcycle and engaging in track driving as my favorite pastimes.
             </Desc>
         </Left>
         <Right>
