@@ -13,10 +13,14 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   max-width: 1400px;
   width: 100%;
@@ -25,8 +29,10 @@ const Container = styled.div`
   justify-content: space-between;
 
   @media only screen and (max-width: 768px) {
+    width: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -40,7 +46,7 @@ const Left = styled.div`
   padding-left: 20px;
 
   @media only screen and (max-width: 768px) {
-    text-align: center;
+    flex: 1;
     align-items: center;
   }
 `;
@@ -50,6 +56,7 @@ const Title = styled.h1`
 
   @media only screen and (max-width: 768px) {
     font-size: 48px;
+    text-align: center;
   }
 `;
 
@@ -72,7 +79,8 @@ const Desc = styled.p`
   color: lightgray;
 
   @media only screen and (max-width: 768px) {
-    font-size: 18px;
+    padding: 20px;
+    text-align: center;
   }
 `;
 
@@ -91,6 +99,11 @@ const ButtonLink = styled(Link)`
 const Right = styled.div`
   flex: 3;
   position: relative;
+  
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+  }
 `;
 
 const typingAnimation = keyframes`
@@ -117,6 +130,7 @@ const typingStyles = css`
 
 const Speak = styled.div`
   width: 215px;
+  height: 70px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -125,7 +139,7 @@ const Speak = styled.div`
   right: 430px;
   color: black;
   font-size: 14px;
-  font-weight: 300390;
+  font-weight: 340;
   overflow: hidden;
   opacity: ${props => (props.visible  ? "1" : "0")};
 
@@ -168,13 +182,12 @@ const HomePageLanding = () => {
   }, [isTyping]);
 
   useEffect(() => {
-    // Set visited to true when the component mounts
     setVisited(true);
   }, []);
 
   return (
     <Section>
-      {/* <Container>
+      <Container>
         <Left>
           <Title>Imaginative, ambitious programmer</Title>
           <WhatWeDo>
@@ -200,7 +213,7 @@ const HomePageLanding = () => {
             <MyAvatarV2 />
           </Canvas>
         </Right>
-      </Container> */}
+      </Container>
     </Section>
   );
 };
