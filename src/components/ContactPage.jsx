@@ -5,7 +5,7 @@ import Map from "./Sections/Map";
 
 const Section = styled.div`
   height: 100%;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
@@ -23,7 +23,7 @@ const Section = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   gap: 50px;
@@ -35,6 +35,10 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -57,6 +61,10 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+  }
 `
 
 const Input = styled.input`
@@ -85,6 +93,10 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ContactPage = () => {
@@ -108,18 +120,18 @@ const ContactPage = () => {
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contact Me</Title>
+            <Title>Lets work together!</Title>
             <SubTitle>Mobile phone: +358 452 334618</SubTitle>
             <SubTitle>Email: aapo.soukkio@gmail.com</SubTitle>
             <a href="https://www.linkedin.com/in/aapo-soukkio-a132b2244/" target="_blank" rel="noopener noreferrer">
             <SubTitle>Message me on LinkedIn</SubTitle>
             </a>
-            <SubTitle>Or fill the form below and I will get back to you.</SubTitle>
+            <SubTitle>Or you can fill the form below and I will get back to you in no time.</SubTitle>
             <Input placeholder="Name" name="name" />
             <Input placeholder="Email" name="email" />
             <TextArea placeholder="Write your message" name="message" rows={8} />
             <Button type="submit">Send</Button>
-            {success && "Your message has been sent. We'll get back to you soon :)"}
+            {success && "Your message has been sent. I will get back to you soon :)"}
           </Form>
         </Left>
         <Right>

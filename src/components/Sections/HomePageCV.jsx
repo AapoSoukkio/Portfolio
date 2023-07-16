@@ -108,13 +108,12 @@ const HomePageCV = () => {
           </Canvas>
         </Left>
         <Right>
-          <Title>"Aapo is the person you wish you had on your team" </Title>
+          <Title>"Aapo has a remarkable talent for tackling complex problems."</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>Consistency, Quality and Logical problem solving</Subtitle>
           </WhatWeDo>
-          <Desc>Hands on attitude gets things done</Desc>
-          <ButtonLink to="/about">Read more</ButtonLink>
+          <Desc>Hands on attitude to get things done</Desc>
           <Anchor href={CV} download>
            Download CV
           </Anchor>

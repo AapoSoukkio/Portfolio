@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SkillBar from "./SkillBar"; 
+import SkillBar from "./SkillBar";
 
 const Section = styled.div`
   height: 100vh;
@@ -9,8 +9,7 @@ const Section = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: 768px) {
-    height: auto; /* Remove fixed height on mobile */
-    padding: 20px; /* Add some padding on mobile */
+    scroll-snap-align: start;
   }
 `;
 
@@ -23,9 +22,11 @@ const Container = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 100%;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
   }
 `;
 
@@ -38,11 +39,10 @@ const Left = styled.div`
   padding-left: 50px;
 
   @media only screen and (max-width: 768px) {
-    /* display: none; */
     flex: 1;
     align-items: center;
-    padding-top: 260px; 
-    padding-bottom: 100px; 
+    padding-top: 30px;
+    padding-bottom: 0px;
     height: 100%;
   }
 `;
@@ -57,7 +57,7 @@ const Title = styled.h1`
 `;
 
 const Right = styled.div`
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,6 +67,7 @@ const Right = styled.div`
   @media only screen and (max-width: 768px) {
     flex: 1;
     width: 100%;
+    align-items: center;
   }
 `;
 
@@ -94,10 +95,16 @@ const Desc = styled.p`
   }
 `;
 
+const StyledContainer = styled(Container)`
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+`;
+
 const AboutPageSkills = () => {
   return (
-    <Section id="section2"> 
-      <Container>
+    <Section id="section2">
+      <StyledContainer>
         <Left>
           <SkillBar />
         </Left>
@@ -107,22 +114,22 @@ const AboutPageSkills = () => {
             <Line src="./img/line.png" />
             <Subtitle>Skills and strengths</Subtitle>
           </SubHeadLine>
-            <Desc>
-                When working, I'm a logical thinker with the ability to grasp the broader scope.
-                I find satisfaction in applying my problem-solving skills to overcome challenges.
-                <br/>
-                <br/>
-                I possess strong team working skills and effective communication abilities.
-                I'm all into open and honest communication, creating a positive and productive team atmosphere. 
-                <br/>
-                <br/>
-                As a programmer, my strengths lie in object-oriented languages,
-                working with datasets and modern web development techniques.
-            </Desc>
+          <Desc>
+            When working, I'm a logical thinker with the ability to grasp the broader scope.
+            I find satisfaction in applying my problem-solving skills to overcome challenges.
+            <br />
+            <br />
+            I possess strong team working skills and effective communication abilities.
+            I'm all into open and honest communication, creating a positive and productive team atmosphere.
+            <br />
+            <br />
+            As a programmer, my strengths lie in object-oriented languages,
+            working with datasets and modern web development techniques.
+          </Desc>
         </Right>
-      </Container>
+      </StyledContainer>
     </Section>
   )
 }
 
-export default AboutPageSkills
+export default AboutPageSkills;

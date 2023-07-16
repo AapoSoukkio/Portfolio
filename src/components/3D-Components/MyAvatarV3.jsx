@@ -21,7 +21,7 @@ export default function MyAvatarV3(props) {
   }, []);
 
   return (
-    <group {...props} ref={group}  scale={3.2} position={[0.0, -2.7, 0]} rotation={[-1.6, 0, -0.5]} dispose={null}>
+    <group {...props} ref={group}  scale={2.7} position={[0, -2.5, 0]} rotation={[-1.2, 0, -0.4]} dispose={null}>
       <primitive object={nodes.Hips} />
       <skinnedMesh geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
       <skinnedMesh geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />

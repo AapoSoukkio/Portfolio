@@ -12,6 +12,20 @@ const Container = styled.div`
   justify-content: none;
   height: 100%;
   scroll-snap-align: center;
+  overflow-y: auto; 
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    scroll-snap-align: start;
+  }
 `;
 
 const Description = styled.p`
@@ -20,6 +34,7 @@ const Description = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 `;
 
 const ProjectGrid = styled.div`

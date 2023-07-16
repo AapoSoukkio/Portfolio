@@ -11,7 +11,8 @@ const Section = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: 768px) {
-    min-height: 200vh;
+    min-height: 100vh;
+    scroll-snap-align: start;
   }
 `;
 
@@ -27,6 +28,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
   }
 `;
 
@@ -99,11 +101,11 @@ const AboutPagePersonal = () => {
             <br/>
             I have a long history of competing in sports at a high level, so I like to keep active. 
             I have always been drawn to two-wheelers, and nowadays, I enjoy in 
-            traveling on motorcycle and engaging in track driving as my favorite pastimes.
+            traveling on motorcycle and track driving as my favorite pastimes.
             </Desc>
         </Left>
         <Right>
-          <Canvas camere>
+          <Canvas>
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
