@@ -7,14 +7,26 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    height: auto; /* Remove fixed height on mobile */
+    padding: 20px; /* Add some padding on mobile */
+  }
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Left = styled.div`
@@ -24,10 +36,24 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
   padding-left: 50px;
+
+  @media only screen and (max-width: 768px) {
+    /* display: none; */
+    flex: 1;
+    align-items: center;
+    padding-top: 260px; 
+    padding-bottom: 100px; 
+    height: 100%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 60px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 48px;
+    text-align: center;
+  }
 `;
 
 const Right = styled.div`
@@ -37,6 +63,11 @@ const Right = styled.div`
   justify-content: center;
   gap: 20px;
   padding-right: 20px;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+  }
 `;
 
 const SubHeadLine = styled.div`
@@ -56,6 +87,11 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 20px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    text-align: center;
+  }
 `;
 
 const AboutPageSkills = () => {

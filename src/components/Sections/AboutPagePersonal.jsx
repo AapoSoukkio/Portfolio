@@ -9,6 +9,10 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    min-height: 200vh;
+  }
 `;
 
 const Container = styled.div`
@@ -17,6 +21,13 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Left = styled.div`
@@ -26,14 +37,28 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
   padding-left: 20px;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 60px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 48px;
+    text-align: center;
+  }
 `;
 
 const Right = styled.div`
   flex: 1; 
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const SubHeadLine = styled.div`

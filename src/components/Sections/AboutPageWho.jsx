@@ -10,14 +10,25 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Left = styled.div`
@@ -27,14 +38,29 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
   padding-left: 20px;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 60px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 48px;
+    text-align: center;
+  }
 `;
 
 const Right = styled.div`
   flex: 1; 
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+  }
 `;
 
 const SubHeadLine = styled.div`
@@ -54,6 +80,11 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 20px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    text-align: center;
+  }
 `;
 
 const Button = styled.button`
@@ -68,6 +99,7 @@ const Button = styled.button`
 `;
 
 const AboutPageWho = () => {
+  const isMobileDevice = window.innerWidth <= 768;
   return (
     <Section>
       <Container>
@@ -88,11 +120,21 @@ const AboutPageWho = () => {
           <Button>See more below</Button>
         </Left>
         <Right>
-          <Canvas>
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <MyAvatarV4 />
+        <Canvas>
+            {isMobileDevice ? (
+              <>
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 1]} />
+                <MyAvatarV4 />
+              </>
+            ) : (
+              <>
+                <OrbitControls enableZoom={false} enableRotate={false} />
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 1]} />
+                <MyAvatarV4 />
+              </>
+            )}
           </Canvas>
         </Right>
       </Container>

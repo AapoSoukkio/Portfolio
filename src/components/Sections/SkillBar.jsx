@@ -7,11 +7,23 @@ const SkillBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 00px;
+  }
 `;
 
 const SkillName = styled.p`
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 16px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const SkillBarFill = styled.div`
@@ -19,6 +31,10 @@ const SkillBarFill = styled.div`
   background-color: #f0f0f0;
   border-radius: 10px;
   overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    height: 15px;
+  }
 `;
 
 const SkillBarProgress = styled.div`
@@ -26,6 +42,10 @@ const SkillBarProgress = styled.div`
   background-color: #da4ea2;
   width: ${(props) => `${props.progress}%`};
   transition: width 0.5s ease;
+
+  @media only screen and (max-width: 768px) {
+    height: 10px;
+  }
 `;
 
 const SkillBar = () => {

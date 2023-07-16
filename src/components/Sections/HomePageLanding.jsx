@@ -147,7 +147,7 @@ const Speak = styled.div`
 
   @media only screen and (max-width: 768px) {
     top: 0;
-    bottom: 0;
+    /* bottom: 0; */
     left: 0;
     right: 0;
     margin: auto;
@@ -185,6 +185,8 @@ const HomePageLanding = () => {
     setVisited(true);
   }, []);
 
+  const isMobileDevice = window.innerWidth <= 768;
+
   return (
     <Section>
       <Container>
@@ -207,10 +209,20 @@ const HomePageLanding = () => {
             </Speak>
           )}
           <Canvas shadows camera={{ position: [-3, 5, 9], fov: 30}}>
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <MyAvatarV2 />
+            {isMobileDevice ? (
+              <>
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 1]} />
+                <MyAvatarV2 />
+              </>
+            ) : (
+              <>
+                <OrbitControls enableZoom={false} enableRotate={false} />
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 1]} />
+                <MyAvatarV2 />
+              </>
+            )}
           </Canvas>
         </Right>
       </Container>

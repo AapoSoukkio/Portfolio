@@ -39,6 +39,7 @@ const Left = styled.div`
   @media only screen and (max-width: 768px) {
     padding: 20px;
     justify-content: center;
+    margin-bottom: 150px
   }
 `;
 
@@ -91,6 +92,12 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    justify-content: center;
+    margin-bottom: 100px
+  }
 `;
 
 const HomePageProjects = () => {
