@@ -27,7 +27,19 @@ A responsive multi-page portfolio
 
 To run the project:
 
-Coming soon
+1. Clone the repository: Start by cloning the repository to your local machine.
+
+2. Install dependencies: Navigate to the project directory and install the necessary dependencies using a package manager like npm or yarn:
+```
+npm install
+```
+
+3. Run the development server: Start the development server to run the React application locally:
+```
+npm start
+```
+
+4. View the application: Open your web browser and visit http://localhost:3000 to see the running application.
 
 ### Notes
 
