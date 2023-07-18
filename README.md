@@ -9,12 +9,15 @@
 
 A responsive multi-page portfolio
 
+![Demo GIF](public/img/presentation_gif.gif)
+
 ### Features
 
-- Fully working Contact page 
 - Various 3D-models with animations
+- Fully working Contact page 
 - User friendly snap scroll 
 - Smooth page change
+- Animated text styling
 
 ### Technologies Used
 
@@ -33,21 +36,29 @@ To run the project:
 ```
 npm install
 ```
+or
+```
+yarn install
+```
 
 3. Run the development server: Start the development server to run the React application locally:
 ```
 npm start
 ```
+or
+```
+yarn run dev
+```
 
-4. View the application: Open your web browser and visit http://localhost:3000 to see the running application.
+4. View the application: Open your web browser and visit http://127.0.0.1:5174/ or whatever URL your terminal window will suggest you to open
 
 ### Notes
 
-Coming soon
-
+- Contact form uses EmailJS and in order to work needs Service Id, Template Id and public key. You can get it running here  --> https://www.emailjs.com/
 ## Helpful Links
 
 > **Following material will help to understand this project and learn more about techniques used in this project.**
 
 
-Coming soon
+- https://threejs.org/
+- https://styled-components.com/
