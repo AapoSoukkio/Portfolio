@@ -147,7 +147,6 @@ const Speak = styled.div`
 
   @media only screen and (max-width: 768px) {
     top: 0;
-    /* bottom: 0; */
     left: 0;
     right: 0;
     margin: auto;
@@ -196,7 +195,7 @@ const HomePageLanding = () => {
             <Line src="./img/line.png" />
             <Subtitle>What I do</Subtitle>
           </WhatWeDo>
-          <Desc>Passion for development and Software-design</Desc>
+          <Desc>Development and Software-design</Desc>
           <ButtonLink to="/about">About Me</ButtonLink>
         </Left>
         <Right>

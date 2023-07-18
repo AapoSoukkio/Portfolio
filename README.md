@@ -31,7 +31,7 @@ Coming soon
 
 ### Notes
 
-oming soon
+Coming soon
 
 ## Helpful Links
 
