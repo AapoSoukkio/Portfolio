@@ -54,7 +54,7 @@ yarn run dev
 
 ### Notes
 
-- Contact form uses EmailJS and in order to work needs Service Id, Template Id and public key. You can get it running here  --> https://www.emailjs.com/
+- Contact form uses EmailJS and in order to work needs Service Id, Template Id and Public key. You can get it running here  --> https://www.emailjs.com/
 ## Helpful Links
 
 > **Following material will help to understand this project and learn more about techniques used in this project.**
