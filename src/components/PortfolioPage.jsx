@@ -13,24 +13,37 @@ const Container = styled.div`
   height: 100%;
   scroll-snap-align: center;
   overflow-y: auto; 
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media only screen and (max-width: 768px) {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 10px;
-    margin-bottom: 20px;
-    scroll-snap-align: start;
+    margin-bottom: 100px;
+    scroll-snap-align: none;
   }
 `;
 
 const Description = styled.p`
-  padding: 34px 0;
-  font-size: 34px;
+  padding: 10px;
+  padding-bottom: 1px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+`;
+
+const SubTitle = styled.p`
+  padding-top: 6px;
+  padding-bottom: 20px;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +53,11 @@ const Description = styled.p`
 const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 46px;
+  grid-gap: 36px;
+
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 200px;
+  }
 `;
 
 const ProjectItem = styled.div`
@@ -115,6 +132,10 @@ const PortfolioPage = () => {
   return (
     <Container>
     <Description>Check out some of my recent work</Description>
+    <SubTitle>
+      CRM Wep-App live demo (behind preview button) uses free hosting and
+      may take up to 2 minutes to download. Thanks for your understanding🙂
+    </SubTitle>
     <ProjectGrid>
       {projects.map((item, index) => (
         <ProjectItem key={index} image={item.image}>
