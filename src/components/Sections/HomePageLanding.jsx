@@ -147,9 +147,14 @@ const Speak = styled.div`
 
   @media only screen and (max-width: 768px) {
     top: 0;
+    margin-right: 1px;
     left: 0;
-    right: 0;
     margin: auto;
+    width: 170px;
+    height: 65px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 11px;
   }
 `;
 
@@ -193,7 +198,7 @@ const HomePageLanding = () => {
           <Title>Imaginative, ambitious programmer</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
-            <Subtitle>What I do</Subtitle>
+            <Subtitle>Aapo Soukkio</Subtitle>
           </WhatWeDo>
           <Desc>Development and Software-design</Desc>
           <ButtonLink to="/about">About Me</ButtonLink>
@@ -216,7 +221,7 @@ const HomePageLanding = () => {
               </>
             ) : (
               <>
-                <OrbitControls enableZoom={false} enableRotate={false} />
+                <OrbitControls enableZoom={false} enableRotate={true} />
                 <ambientLight intensity={1} />
                 <directionalLight position={[3, 2, 1]} />
                 <MyAvatarV2 />

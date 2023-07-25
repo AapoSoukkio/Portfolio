@@ -6,6 +6,12 @@ import Map from "./Map";
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+
+  @media only screen and (max-width: 768px) {
+    scroll-snap-type: none;
+    padding-bottom: 50px;
+    margin-top: 10px;
+  }
 `;
 
 const Container = styled.div`

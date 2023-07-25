@@ -2,7 +2,7 @@ import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
-import CV from "../../assets/CV.pdf";
+import CV from "../../assets/CV Aapo Soukkio.pdf";
 import { Link } from "react-router-dom";
 
 const Section = styled.div`
@@ -30,6 +30,10 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-size: 54px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;;
+  }
 `;
 
 const Right = styled.div`
@@ -42,6 +46,8 @@ const Right = styled.div`
   @media only screen and (max-width: 768px) {
     align-items: center;
     text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 `;
 
@@ -57,11 +63,19 @@ const Line = styled.img`
 
 const Subtitle = styled.h2`
   color: #da4ea2;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const ButtonLink = styled(Link)`
