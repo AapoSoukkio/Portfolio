@@ -86,6 +86,7 @@ const Desc = styled.p`
   @media only screen and (max-width: 768px) {
     padding: 20px;
     text-align: center;
+    font-size: 16px;
   }
 `;
 
@@ -97,7 +98,6 @@ const Button = styled.button`
   padding: 10px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
 `;
 
 const AboutPageWho = () => {
@@ -106,7 +106,7 @@ const AboutPageWho = () => {
     <Section>
       <Container>
         <Left>
-          <Title>Hi, My name is Aapo Soukkio</Title>
+          <Title>Aapo Soukkio</Title>
           <SubHeadLine>
             <Line src="./img/line.png" />
             <Subtitle>Who I am</Subtitle>
@@ -119,7 +119,7 @@ const AboutPageWho = () => {
             in software development and design, encompassing a solid understanding of
             network technologies as well.
             </Desc>
-          <Button>See more below</Button>
+          <Button>Scroll down & see more</Button>
         </Left>
         <Right>
         <Canvas>

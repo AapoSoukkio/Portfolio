@@ -17,7 +17,8 @@ const Container = styled.div`
   }
 
   @media only screen and (max-width: 768px) {
-    scroll-snap-align: start;
+    scroll-snap-type: none;
+    scroll-snap-align: none;
   }
 `;
 

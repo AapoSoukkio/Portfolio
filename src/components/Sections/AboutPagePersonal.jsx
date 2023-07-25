@@ -13,6 +13,7 @@ const Section = styled.div`
   @media only screen and (max-width: 768px) {
     min-height: 100vh;
     scroll-snap-align: start;
+    margin-top: 80px;
   }
 `;
 
@@ -39,6 +40,7 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
   padding-left: 20px;
+  margin-bottom: 60px;
 
   @media only screen and (max-width: 768px) {
     flex: 1;
@@ -50,7 +52,7 @@ const Title = styled.h1`
   font-size: 60px;
 
   @media only screen and (max-width: 768px) {
-    font-size: 48px;
+    font-size: 38px;
     text-align: center;
   }
 `;
@@ -75,11 +77,19 @@ const Line = styled.img`
 
 const Subtitle = styled.h2`
   color: #da4ea2;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Desc = styled.p`
   font-size: 20px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const AboutPagePersonal = () => {

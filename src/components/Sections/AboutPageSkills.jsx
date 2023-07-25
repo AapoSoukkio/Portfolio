@@ -51,7 +51,7 @@ const Title = styled.h1`
   font-size: 60px;
 
   @media only screen and (max-width: 768px) {
-    font-size: 48px;
+    font-size: 38px;
     text-align: center;
   }
 `;
@@ -83,6 +83,10 @@ const Line = styled.img`
 
 const Subtitle = styled.h2`
   color: #da4ea2;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Desc = styled.p`
@@ -92,6 +96,7 @@ const Desc = styled.p`
   @media only screen and (max-width: 768px) {
     padding: 20px;
     text-align: center;
+    font-size: 16px;
   }
 `;
 
