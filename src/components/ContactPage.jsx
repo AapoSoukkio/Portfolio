@@ -2,22 +2,28 @@ import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 import Map from "./Sections/Map";
+import CV from "../assets/CV Aapo Soukkio.pdf";
 
 const Section = styled.div`
   height: 100%;
   scroll-snap-align: center;
   overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
-    width: 0.5rem;
+    display: none;
   }
   &::-webkit-scrollbar-track {
     background: transparent;
   }
   &::-webkit-scrollbar-thumb {
     background-color: transparent;
+  }
+
+  @media only screen and (max-width: 768px) {
+    scroll-snap-type: none;
+    /* scroll-snap-align: none; */
+    padding-bottom: 300px;
+    margin-top: 10px;
   }
 `;
 
@@ -27,7 +33,6 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  padding-bottom: 100px; 
 `;
 
 const Left = styled.div`
@@ -35,6 +40,8 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-top: 180px;
+  padding-bottom: 100px;
 
   @media only screen and (max-width: 768px) {
     justify-content: center;
@@ -51,16 +58,11 @@ const SubTitle = styled.h3`
   color: white;
 `;
 
-const Icon = styled.img`
-  width: 40px;
-  cursor: pointer;
-`;
-
 const Form = styled.form`
   width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 
   @media only screen and (max-width: 768px) {
     width: 300px;
@@ -93,11 +95,24 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+  min-height: 135%;
 
   @media only screen and (max-width: 768px) {
     display: none;
   }
 `;
+
+const Anchor = styled.a`
+  background-color: #da4ea2;
+  color: white;
+  font-weight: 500;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+`
 
 const ContactPage = () => {
   const ref = useRef()
@@ -121,15 +136,18 @@ const ContactPage = () => {
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Lets work together!</Title>
+            <Anchor href={CV} download>
+              Download CV
+            </Anchor>
             <SubTitle>Mobile phone: +358 452 334618</SubTitle>
             <SubTitle>Email: aapo.soukkio@gmail.com</SubTitle>
             <a href="https://www.linkedin.com/in/aapo-soukkio-a132b2244/" target="_blank" rel="noopener noreferrer">
             <SubTitle>Message me on LinkedIn</SubTitle>
             </a>
-            <SubTitle>Or you can fill the form below and I will get back to you in no time.</SubTitle>
+            <SubTitle>Or you can fill the form below and I will get back to you in no time 📬</SubTitle>
             <Input placeholder="Name" name="name" />
             <Input placeholder="Email" name="email" />
-            <TextArea placeholder="Write your message" name="message" rows={8} />
+            <TextArea placeholder="Write your message" name="message" rows={10} />
             <Button type="submit">Send</Button>
             {success && "Your message has been sent. I will get back to you soon :)"}
           </Form>
