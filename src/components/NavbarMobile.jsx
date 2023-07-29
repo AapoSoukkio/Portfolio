@@ -94,6 +94,9 @@ const ButtonLink = styled(Link)`
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const NavbarMobile = () => {
