@@ -78,18 +78,6 @@ const Desc = styled.p`
   }
 `;
 
-const ButtonLink = styled(Link)`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
-  width: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-`;
-
 const Anchor = styled.a`
   background-color: #da4ea2;
   color: white;
