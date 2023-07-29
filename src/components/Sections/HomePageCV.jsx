@@ -100,6 +100,9 @@ const Anchor = styled.a`
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 ` 
 
 const HomePageCV = () => {
