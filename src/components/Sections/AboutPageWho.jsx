@@ -2,7 +2,6 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
-import { Element, Events, animateScroll as scroll } from "react-scroll";
 import MyAvatarV4 from "../3D-Components/MyAvatarV4";
 
 const Section = styled.div`
@@ -79,6 +78,17 @@ const Subtitle = styled.h2`
   color: #da4ea2;
 `;
 
+const Subtitle2 = styled.h2`
+  color: #da4ea2;
+  padding-top: 30px;
+  font-size: 20px;
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 20px;
+    font-size: 20px;
+  }
+`;
+
 const Desc = styled.p`
   font-size: 20px;
   color: lightgray;
@@ -88,16 +98,6 @@ const Desc = styled.p`
     text-align: center;
     font-size: 16px;
   }
-`;
-
-const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
-  width: 120px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
 `;
 
 const AboutPageWho = () => {
@@ -119,7 +119,7 @@ const AboutPageWho = () => {
             in software development and design, encompassing a solid understanding of
             network technologies as well.
             </Desc>
-          <Button>Scroll down & see more</Button>
+            <Subtitle2>Scroll down for more ↴</Subtitle2>
         </Left>
         <Right>
         <Canvas>
