@@ -38,6 +38,10 @@ const Logo = styled.img`
   width: 80px;
 `;
 
+const LogoLink = styled(Link)`
+  text-decoration: none; 
+`;
+
 const List = styled.ul`
   display: flex;
   gap: 20px;
@@ -117,7 +121,9 @@ const Navbar = () => {
         ) : (
           <>
             <Links>
-              <Logo src="./img/logoV6.png" />
+              <LogoLink to="/">
+                <Logo src="./img/logoV6.png" />
+              </LogoLink>
               <List>
                 <ListItem>
                   <StyledLink to="/">Home</StyledLink>

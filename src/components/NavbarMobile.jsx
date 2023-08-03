@@ -51,6 +51,10 @@ const Logo = styled.img`
   width: 80px;
 `;
 
+const LogoLink = styled(Link)`
+  text-decoration: none; 
+`;
+
 const List = styled.ul`
   display: flex;
   flex-direction: column;
@@ -114,7 +118,9 @@ const NavbarMobile = () => {
     <Section>
       <Container>
         <NavbarWrapper>
-          <Logo src="./img/logoV6.png" />
+          <LogoLink to="/">
+            <Logo src="./img/logoV6.png" />
+          </LogoLink>
           <ToggleButton onClick={toggleMenu}>
             <ToggleBar />
             <ToggleBar />
