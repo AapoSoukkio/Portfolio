@@ -51,7 +51,7 @@ export default function MyAvatarV4(props) {
   }, [hasPlayedStandingUp]);
 
   return (
-    <group {...props} ref={group}  scale={2} position={[-0.5, -0.6, -3.5]} rotation={[-1.2, 0, -0.1]} dispose={null}>
+    <group {...props} ref={group}  scale={2} position={[-1.6, -0.0, -4.0]} rotation={[-1.2, 0, -0.1]} dispose={null}>
       <primitive object={nodes.Hips} />
       <skinnedMesh geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
       <skinnedMesh geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
