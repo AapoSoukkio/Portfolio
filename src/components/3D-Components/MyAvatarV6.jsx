@@ -21,7 +21,7 @@ export default function Model(props) {
   }, []);
 
   return (
-    <group {...props} ref={group}  scale={2.7} position={[1.5, -2.7, 0]} rotation={[-1.6, 0, -1.1]} dispose={null}>
+    <group {...props} ref={group}  scale={2.7} position={[1.5, -2.0, 0]} rotation={[-1.6, 0, -1.1]} dispose={null}>
       <primitive object={nodes.Hips} />
       <skinnedMesh geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
       <skinnedMesh geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
