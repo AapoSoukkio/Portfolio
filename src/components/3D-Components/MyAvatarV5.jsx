@@ -11,20 +11,23 @@ export default function MyAvatarV5(props) {
   const { nodes, materials } = useGLTF('/MyAvatarV5.glb')
 
   const {animations: StumbleBackwardsAnimation} = useFBX("animations/StumbleBackwards.fbx");
+  const {animations: SittingIdleAnimation} = useFBX("animations/SittingIdle.fbx");
 
   StumbleBackwardsAnimation[0].name = "StumbleBackwards";
   StumbleBackwardsAnimation[0].duration = 100; //Set to be 100sec TODO: How to disable the looping
 
-  const { actions} = useAnimations(StumbleBackwardsAnimation, group);
+  SittingIdleAnimation[0].name = "SittingIdle";
+
+  const { actions} = useAnimations(SittingIdleAnimation, group);
 
   useEffect(() => {
-    actions["StumbleBackwards"].reset().play();
-    const action = actions["StumbleBackwards"];
+    actions["SittingIdle"].reset().play();
+    const action = actions["SittingIdle"];
     action.time = 0.4; // Set the time of the animation action to the middle
   }, []);
 
   return (
-    <group {...props} ref={group}  scale={2.5} position={[-1, -2, -0.5]} rotation={[-1, 0, -0.2]} dispose={null}>
+    <group {...props} ref={group}  scale={2.5} position={[-1, -0.4, -0.5]} rotation={[-1.2, 0, 0.4]} dispose={null}>
       <primitive object={nodes.Hips} />
       <skinnedMesh geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
       <skinnedMesh geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
