@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
 import CV from "../../assets/CV Aapo Soukkio.pdf";
-import { Link } from "react-router-dom";
 
 const Section = styled.div`
   height: 100vh;
