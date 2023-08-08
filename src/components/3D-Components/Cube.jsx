@@ -3,12 +3,6 @@ import { useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
-  height: 100vh;
-  width: 100%;
-  scroll-snap-align: center;
-`
-
 const Cube = () => {
     const textRef = useRef()
     useFrame(state=> (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 2)
