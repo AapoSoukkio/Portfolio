@@ -10,12 +10,7 @@ export default function MyAvatarV5(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF('/MyAvatarV5.glb')
 
-  const {animations: StumbleBackwardsAnimation} = useFBX("animations/StumbleBackwards.fbx");
   const {animations: SittingIdleAnimation} = useFBX("animations/SittingIdle.fbx");
-
-  StumbleBackwardsAnimation[0].name = "StumbleBackwards";
-  StumbleBackwardsAnimation[0].duration = 100; //Set to be 100sec TODO: How to disable the looping
-
   SittingIdleAnimation[0].name = "SittingIdle";
 
   const { actions} = useAnimations(SittingIdleAnimation, group);
@@ -23,7 +18,6 @@ export default function MyAvatarV5(props) {
   useEffect(() => {
     actions["SittingIdle"].reset().play();
     const action = actions["SittingIdle"];
-    action.time = 0.4; // Set the time of the animation action to the middle
   }, []);
 
   return (
