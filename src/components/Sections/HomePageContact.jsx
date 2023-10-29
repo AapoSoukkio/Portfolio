@@ -104,8 +104,8 @@ const HomePageContact = () => {
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Me</Title>
-            <Input placeholder="Name" name="name" />
-            <Input placeholder="Email" name="email" />
+            <Input placeholder="Name" name="name" required />
+            <Input placeholder="Email" name="email" type="email" required />
             <TextArea placeholder="Write your message" name="message" rows={9} />
             <Button type="submit">Send</Button>
             {success && "Your message has been sent. We'll get back to you soon :)"}

@@ -144,8 +144,8 @@ const ContactPage = () => {
             <SubTitle>Message me on LinkedIn</SubTitle>
             </a>
             <SubTitle>Or you can fill the form below and I will get back to you in no time 📬</SubTitle>
-            <Input placeholder="Name" name="name" />
-            <Input placeholder="Email" name="email" />
+            <Input placeholder="Name" name="name" required/>
+            <Input placeholder="Email" name="email" type="email" required/>
             <TextArea placeholder="Write your message" name="message" rows={10} />
             <Button type="submit">Send</Button>
             {success && "Your message has been sent. I will get back to you soon :)"}
