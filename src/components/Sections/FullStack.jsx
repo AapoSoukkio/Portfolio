@@ -39,7 +39,7 @@ const FullStack = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        I have multiple completed full-stack applications.
+        Working as a full-stack software developer.
         <br />
         <Link to="/projects">See my work</Link>
       </Desc>

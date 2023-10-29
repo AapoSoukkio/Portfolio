@@ -112,12 +112,9 @@ const AboutPageWho = () => {
             <Subtitle>Who I am</Subtitle>
           </SubHeadLine>
           <Desc>
-            I'm 25- years old programmer, IT-student and former mining equipment
-            mechanic from Tampere, Finland. At the moment I approach the completion
-            of my Information technology studies that are ongoing at Savonia University
-            of Applied Sciences in Kuopio, Finland. The primary focus of my studies lies
-            in software development and design, encompassing a solid understanding of
-            network technologies as well.
+          I'm 25- years old IT-engineer and software developer from Tampere, Finland.
+          Currently, I work as a full-stack developer alongside highly skilled colleagues.
+          What drives me is a commitment to clean code, ensuring security, and continuous learning.
             </Desc>
             <Subtitle2>Scroll down for more ↴</Subtitle2>
         </Left>

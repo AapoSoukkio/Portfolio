@@ -37,7 +37,7 @@ const WebDesign = () => {
         <MyAvatarV6 />
       </Canvas>
       <Desc>
-        I have gained solid amount of experience in creating and developing web pages.
+        Great amount of experience in developing and deploying web applications.
         <br />
         <Link to="/projects">See my work</Link>
       </Desc>

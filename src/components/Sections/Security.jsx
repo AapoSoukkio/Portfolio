@@ -37,7 +37,7 @@ const Development = () => {
         <Computer />
       </Canvas>
       <Desc>
-        Development work is where my strengths truly lie. 
+        Security research and bug hunting are some of my favorite topics in the field. 
         <br />
         <Link to="/projects">See my work</Link>
       </Desc>

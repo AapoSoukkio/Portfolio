@@ -146,7 +146,7 @@ const Navbar = () => {
               <a href="https://github.com/AapoSoukkio" target="_blank" rel="noopener noreferrer">
                 <Icon src="./img/github.png" alt="GitHub" />
               </a>
-              <ButtonLink to="/contact">Hire Now!</ButtonLink>
+              <ButtonLink to="/contact">Contact me!</ButtonLink>
             </Icons>
           </>
         )}

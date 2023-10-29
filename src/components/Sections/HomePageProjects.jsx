@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import FullStack from "./FullStack";
-import WebDesign from "./WebDesign";
+import WebDev from "./WebDev";
 import MoreOfMyWork from "./MoreOfMyWork";
-import Development from "./Development";
+import Security from "./Security";
 
 const data = [
   "Full stack",
-  "Web Design",
-  "Development",
+  "Web Dev",
+  "Security",
   "Others"
 ];
 
@@ -80,6 +80,9 @@ const ListItem = styled.li`
     &::after {
       animation: moveText 0.5s linear both;
 
+      @media only screen and (max-width: 768px) {
+        animation: none; 
+      }
       @keyframes moveText {
         to {
           width: 100%;
@@ -100,6 +103,17 @@ const Right = styled.div`
   }
 `;
 
+const ArrowIndicator = styled.span`
+  font-size: 30px;
+  color: white;
+  margin-left: 10px;
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: inline;
+  }
+`;
+
 const HomePageProjects = () => {
   const [work, setWork] = useState("Full stack");
   return (
@@ -109,6 +123,7 @@ const HomePageProjects = () => {
           <List>
             {data.map((item) => (
               <ListItem key={item} data-text={item} onClick={()=>setWork(item)}>
+                {work === item ? <ArrowIndicator>→ </ArrowIndicator> : null}
                 {item}
               </ListItem>
             ))}
@@ -117,10 +132,10 @@ const HomePageProjects = () => {
         <Right>
         {work === "Full stack" ? (
             <FullStack />
-          ) : work === "Web Design" ? (
-            <WebDesign />
-          ) : work === "Development" ? (
-            <Development />
+          ) : work === "Web Dev" ? (
+            <WebDev />
+          ) : work === "Security" ? (
+            <Security />
           ) : (
             <MoreOfMyWork />
           )}
